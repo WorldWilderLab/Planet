@@ -1,0 +1,15 @@
+#!/bin/bash
+
+LOGDIR=/home/organiccinema
+TOPIC=$1
+HOST=192.168.0.10
+
+if [ ! -d $LOGDIR/$TOPIC ] 
+then
+  echo creating $LOGDIR/$TOPIC
+  mkdir $LOGDIR/$TOPIC
+fi
+LOG=$LOGDIR/$TOPIC/`date +%s`
+(mosquitto_sub -h $HOST -v -t $TOPIC -t $TOPIC/# | ( while read t v ; do echo `date +%s`,`date -R`,$t,$v >> $LOG; done )) &
+
+
