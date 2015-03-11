@@ -8,3 +8,7 @@ Our goal was to create such device so that anyone who is enthusiastic about it w
 
 ## How to setup
 ...
+
+
+## License
+This work by [World Wilder Lab](http://www.worldwilderlab.net/) is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
