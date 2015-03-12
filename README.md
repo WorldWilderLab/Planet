@@ -16,7 +16,7 @@ Our goal was to create such device so that anyone who is enthusiastic about it w
 * On line 32 it says: `const boolean USE_DHCP = false;`, if you want to connect the device directly to your computer or for any other reason use a manual ip address set this to `false`. If you want to connect the device to a network (router, hub, etc) you can set this `true`.
 * On line 53 it says: `char server[]      = "192.168.1.2"; // "mqtt.lan";`, change that ip-address to where you have your server.
 * On line 56 it says: `#define MQTTPREFIX   "/plant/10"`, this is where you set the mqtt address of this device.
-* Now load the sketch to your arduino. And stack the ethernet shield on the arduino and the organic cinema shield on the ethernet shield.
+* Now load the sketch to your arduino, stack the ethernet shield on the arduino and the organic cinema shield on the ethernet shield.
 * install [mosquitto](http://mosquitto.org/) on your computer.
 
 
