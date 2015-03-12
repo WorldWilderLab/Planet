@@ -28,6 +28,9 @@ void msetup(void);
 void mloop(void);
 void callback(char* topic, byte* payload, unsigned int length);
 
+// change this to false if you want to use a manual ip address, enter this address in eenet.h!
+const boolean USE_DHCP = false;
+
 
 // sensor
 
@@ -47,10 +50,10 @@ MedianFilter diff2(9,0);
 
 // where to publish / subscribe
 // point this to your mqtt server. It could be a local machine, but for small numbers we can share a server.
-char server[]      = "artag.phoenixhaven.net"; // "mqtt.lan";
+char server[]      = "192.168.1.2"; // "mqtt.lan";
 
 // this identifies your data. I currently have plants 1 to 3. Start yours at 10.
-#define MQTTPREFIX   "/plant/3"
+#define MQTTPREFIX   "/plant/10"
 
 
 // input attenuator is 100k / (100k + (1M || (710k/2))
@@ -328,10 +331,11 @@ void msetup()
   }
   Serial.print(ee.mem.mac[5], HEX);
   Serial.print("  ");
-  if (Ethernet.begin(ee.mem.mac) == 0) {
-    //Serial.println("\nFailed to configure Ethernet using DHCP");
+  if(USE_DHCP) {
+    Ethernet.begin(ee.mem.mac);
+  } else {
+    Ethernet.begin(ee.mem.mac, ee.mem.ip);
   }
-
 
   // print your local IP address:
 
