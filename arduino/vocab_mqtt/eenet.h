@@ -13,7 +13,7 @@ union eeconfig {
   { 192,168,1,254 },                    // GWR Gateway IP Address Register
   { 255,255,255,0 },                    // SUBR Subnet Mask Register
   { 0x90,0xa2,0xda,0x00,0xf3,0x38} ,    // SHAR Source Hardware Address Register
-  { 192,168,1,1 }                       // SIPR Source IP Address Register
+  { 192,168,1,86 }                       // SIPR Source IP Address Register
 }
   // EEPROM block ends here
 }; 
