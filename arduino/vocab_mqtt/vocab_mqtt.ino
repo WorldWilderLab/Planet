@@ -90,7 +90,7 @@ struct publist {
        uint8_t flags;
 
 } plist[] = { 
-  { "/light",   { 0 }, { 0 }, 0,500, 5000,  VFLOAT  },
+//  { "/light",   { 0 }, { 0 }, 0,500, 5000,  VFLOAT  },
   { "/probe/0",  { 0 }, { 0 }, 0,500, 5000,  VFLOAT  },
   { "/probe/1",  { 0 }, { 0 }, 0,500, 5000,  VFLOAT  },
 //  { "/debug/loopt", { 0 }, { 0 },0,2000,25000, VINT    },
@@ -239,10 +239,10 @@ void loop()
 
   // report light level - not available yet. Plan to use i2c light sensor
 
-  plist[PLIGHT].d.d_float = 0.0;
-  if (fabsf(plist[PLIGHT].sent.d_float - plist[PLIGHT].d.d_float) > LIGHTJITTER) {
-    plist[PLIGHT].flags |= VCHANGED;
-  }
+//  plist[PLIGHT].d.d_float = 0.0;
+//  if (fabsf(plist[PLIGHT].sent.d_float - plist[PLIGHT].d.d_float) > LIGHTJITTER) {
+//    plist[PLIGHT].flags |= VCHANGED;
+//  }
 
 
   // report probe voltages
