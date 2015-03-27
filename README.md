@@ -1,4 +1,4 @@
-# OrganicCinema
+# PLAN(e)T
 
 ## About
 The World Wilder Lab Device aim is to get action & variation potential signals from plants, in real time and in any circumstances. The action and variation potentials present in plants can give us an insight into all the processes happening inside the plant. We can use these signals to see its reaction to its environment and witness certain actions as a response.  
