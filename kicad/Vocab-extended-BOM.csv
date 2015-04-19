@@ -16,3 +16,6 @@ Id,Designator,Package,Quantity,Designation,Supplier and ref
 ,,6 pin stacking header,1,,
 ,,8 pin stacking header,2,,
 ,,10 pin stacking header,1,,
+,,Ethernet shield for arduino,1,,
+,,electrodes,4,,we have been using these: http://tinyurl.com/kn9x65f
+,,metal pin,2,,"this could be a screw, nail or screwdriver"
