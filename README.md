@@ -8,6 +8,12 @@ Our goal was to create such device so that anyone who is enthusiastic about it w
 
 ## How to setup
 
+### Shield
+
+* In the `kicad` folder are all the files needed for you to reproduce the shield.
+* You can find the schematic [here](https://github.com/WorldWilderLab/Planet/blob/master/kicad/Vocab.pdf).
+* You can find the partslist [here](https://github.com/WorldWilderLab/Planet/blob/master/kicad/partslist.csv).
+
 ### Arduino
 
 * Using this arduino code requires you use an [ethernet shield](http://www.arduino.cc/en/Main/ArduinoEthernetShield).
@@ -19,6 +25,10 @@ Our goal was to create such device so that anyone who is enthusiastic about it w
 * Now load the sketch to your arduino, stack the ethernet shield on the arduino and the organic cinema shield on the ethernet shield.
 * install [mosquitto](http://mosquitto.org/) on your computer.
 
+### Scripts
+
+* In the `scripts` folder you will find scripts we use for logging data.
+* Please read the readme in the `scripts` folder for more info on usage.
 
 ## License
 This work by [World Wilder Lab](http://www.worldwilderlab.net/) is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
