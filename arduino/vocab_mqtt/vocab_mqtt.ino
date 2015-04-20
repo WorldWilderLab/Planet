@@ -97,7 +97,7 @@ struct publist {
   { NULL }
 };
 
-enum PUBLISHIX { PLIGHT, PPROBE0, PPROBE1, PLOOPT  };
+enum PUBLISHIX { /*PLIGHT,*/ PPROBE0, PPROBE1, PLOOPT  };
 
 #define VOLTJITTER   0.0002
 #define LIGHTJITTER  5.0
