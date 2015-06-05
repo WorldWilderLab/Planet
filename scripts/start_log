@@ -12,6 +12,10 @@ fi
 
 LOG=$LOGDIR/$TOPIC/`date +%s`
 
-(mosquitto_sub -h $HOST -v -t $TOPIC -t $TOPIC/# | ( while read t v ; do echo `date +%s`,`date -R`,$t,$v >> $LOG; done )) &
+(mosquitto_sub -h $HOST -v -t $TOPIC -t $TOPIC/# | ( while read t v ; 
+                                                        do
+                                                            let time=`date +%s%N`/1000000;
+                                                            echo $time,`date -R`,$t,$v >> $LOG; 
+                                                        done )) &
 
 
