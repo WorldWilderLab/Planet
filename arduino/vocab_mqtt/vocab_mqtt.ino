@@ -29,7 +29,7 @@ void mloop(void);
 void callback(char* topic, byte* payload, unsigned int length);
 
 // change this to false if you want to use a manual ip address, enter this address in eenet.h!
-const boolean USE_DHCP = false;
+const boolean USE_DHCP = true;
 
 
 // sensor
@@ -50,10 +50,10 @@ MedianFilter diff2(9,0);
 
 // where to publish / subscribe
 // point this to your mqtt server. It could be a local machine, but for small numbers we can share a server.
-char server[]      = "192.168.1.2"; // "mqtt.lan";
+char server[]      = "192.168.1.3"; // "mqtt.lan";
 
 // this identifies your data. I currently have plants 1 to 3. Start yours at 10.
-#define MQTTPREFIX   "/plant/10"
+#define MQTTPREFIX   "/plant/3"
 
 
 // input attenuator is 100k / (100k + (1M || (710k/2))
